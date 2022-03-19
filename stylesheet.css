@@ -84,15 +84,18 @@ nav li a {
 }
 
 .topics li {
-    text-transform: uppercase;
     list-style: none;
-    font-family: 'Cormorant Garamond', serif;
-    font-size: 24px;
+    
     margin: auto 0;
 }
 
-.topics li a {
+.topics li button {
     color: #263061;
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 24px;
+    text-transform: uppercase;
+    border: none;
+    background-color: transparent;
 }
 
 .active {

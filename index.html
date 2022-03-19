@@ -24,13 +24,13 @@
             </nav>
             <div class="topics center"> 
                 <ul> 
-                  <li class="left"><a href="" class = "block tablink" id="defaultOpen" onclick="openPage('Teddies', this)">Teddies</a></li> 
-                  <li class="left"><a href="" class = "block tablink" onclick="openPage('Embroidery', this)">Embroidery</a></li> 
-                  <li class="left"><a href="" class = "block tablink" onclick="openPage('Knitting', this)"> Knitting</a></li> 
-                  <li class="left"><a href="" class = "block tablink" onclick="openPage('Miscellaneous', this)">Miscellaneous</a></li> 
-                  <li class="left"><a href="" class = "block tablink" onclick="openPage('Sewing', this)">Sewing</a></li> 
-                  <li class="left"><a href="" class = "block tablink" onclick="openPage('Upholstery', this)">Upholstery</a></li> 
-                  <li class="left"><a href="" class = "block tablink" onclick="openPage('Crochet', this)">Crochet</a></li> 
+                  <li class="left"><button class="block tablink active" onclick="openCity(event,'Teddies')">Teddies</button></li> 
+                  <li class="left"><button class="block tablink" onclick="openCity(event,'Embroidery')">Embroidery</button></li> 
+                  <li class="left"><button class="block tablink" onclick="openCity(event,'Knitting')">Knitting</button></li> 
+                  <li class="left"><button class="block tablink" onclick="openCity(event,'Miscellaneous')">Miscellaneous</button></li> 
+                  <li class="left"><button class="block tablink" onclick="openCity(event,'Sewing')">Sewing</button></li> 
+                  <li class="left"><button class="block tablink" onclick="openCity(event,'Upholstery')">Upholstery</button></li> 
+                  <li class="left"><button class="block tablink" onclick="openCity(event,'Crochet')">Crochet</button></li> 
                 </ul> 
 
                 <select> 
@@ -45,52 +45,50 @@
                 </select> 
             </div>
 
-            <div id="Teddies" class="tabcontent">
+            <div id="Teddies" class="city tablink">
                 <p>This is teddies</p>
             </div>
 
-            <div id="Embroidery" class="tabcontent">
+            <div id="Embroidery" class="city tablink" style="display:none">
                 <p>This is Embroidery</p>
             </div>
 
-            <div id="Knitting" class="tabcontent">
+            <div id="Knitting" class="city tablink" style="display:none">
                 <p>This is Knitting</p>
             </div>
 
-            <div id="Miscellaneous" class="tabcontent">
+            <div id="Miscellaneous" class="city tablink" style="display:none">
                 <p>This is Miscellaneous</p>
             </div>
 
-            <div id="Sewing" class="tabcontent">
+            <div id="Sewing" class="city tablink" style="display:none">
                 <p>This is Sewing</p>
             </div>
 
-            <div id="Upholstery" class="tabcontent">
+            <div id="Upholstery" class="city tablink" style="display:none">
                 <p>This is Upholstery</p>
             </div>
 
-            <div id="Crochet" class="tabcontent">
+            <div id="Crochet" class="city tablink" style="display:none">
                 <p>This is Crochet</p>
             </div>
         </div>
 
         <script>
-            function openPage(pageName,elmnt) {
-                //hides everything by defualt when page opens
-              var i, tabcontent, tablinks;
-              tabcontent = document.getElementsByClassName("tabcontent");
-              for (i = 0; i < tabcontent.length; i++) {
-                tabcontent[i].style.display = "none";
-              }
-              //Show the content of the tab that is clicked on
-              document.getElementById(pageName).style.display = "block";
-              document.getElementById(pageName).classList.add("active");
-              elmnt.style.backgroundColor = color;
+            //code from https://www.w3schools.com/w3css/tryit.asp?filename=tryw3css_tabulators
+            function openCity(evt, cityName) {
+                var i, x, tablinks;
+                x = document.getElementsByClassName("city");
+                for (i = 0; i < x.length; i++) {
+                    x[i].style.display = "none";
+                }
+                tablinks = document.getElementsByClassName("tablink");
+                for (i = 0; i < x.length; i++) {
+                    tablinks[i].className = tablinks[i].className.replace(" active", "");
+                }
+                document.getElementById(cityName).style.display = "block";
+                evt.currentTarget.className += " active";
             }
-            
-            // Get the element with id="defaultOpen" and click on it
-            document.getElementById("defaultOpen").click();
-            document.getElementById("defaultOpen").classList.add("active");
             </script>
     </body>
 
