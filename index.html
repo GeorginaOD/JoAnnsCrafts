@@ -24,17 +24,17 @@
             </nav>
             <div class="topics center"> 
                 <ul> 
-                  <li class="left"><a href="/" class="active" class = "block">Teddies</a></li> 
-                  <li class="left"><a href="/collections/all" class = "block">Embroidery</a></li> 
-                  <li class="left"><a href="/blogs/five-simple-steps-blog" class = "block"> Knitting</a></li> 
-                  <li class="left"><a href="/pages/about-us" class = "block">Miscellaneous</a></li> 
-                  <li class="left"><a href="/pages/support" class = "block">Sewing</a></li> 
-                  <li class="left"><a href="/pages/support" class = "block">Upholstery</a></li> 
-                  <li class="left"><a href="/pages/support" class = "block">Crochet</a></li> 
+                  <li class="left"><a href="/" class = "active block tablink" id="defaultOpen" onclick="openPage('Teddies', this)">Teddies</a></li> 
+                  <li class="left"><a href="/collections/all" class = "block tablink" onclick="openPage('Embroidery', this)">Embroidery</a></li> 
+                  <li class="left"><a href="/blogs/five-simple-steps-blog" class = "block tablink" onclick="openPage('Knitting', this)"> Knitting</a></li> 
+                  <li class="left"><a href="/pages/about-us" class = "block tablink" onclick="openPage('Miscellaneous', this)">Miscellaneous</a></li> 
+                  <li class="left"><a href="/pages/support" class = "block tablink" onclick="openPage('Sewing', this)">Sewing</a></li> 
+                  <li class="left"><a href="/pages/support" class = "block tablink" onclick="openPage('Upholstery', this)">Upholstery</a></li> 
+                  <li class="left"><a href="/pages/support" class = "block tablink" onclick="openPage('Crochet', this)">Crochet</a></li> 
                 </ul> 
 
                 <select> 
-                  <option value="" selected="selected">Teddies</option> 
+                  <option value="" selected="selected" id="defaultOpen">Teddies</option> 
                   
                   <option value="/">Embroidery</option> 
                   <option value="/collections/all">Knitting</option> 
@@ -44,7 +44,54 @@
                   <option value="/pages/support">Crochet</option> 
                 </select> 
             </div>
+
+            <div id="Teddies" class="tabcontent">
+                <p>This is teddies</p>
+            </div>
+
+            <div id="Embroidery" class="tabcontent">
+                <p>This is Embroidery</p>
+            </div>
+
+            <div id="Knitting" class="tabcontent">
+                <p>This is Knitting</p>
+            </div>
+
+            <div id="Miscellaneous" class="tabcontent">
+                <p>This is Miscellaneous</p>
+            </div>
+
+            <div id="Sewing" class="tabcontent">
+                <p>This is Sewing</p>
+            </div>
+
+            <div id="Upholstery" class="tabcontent">
+                <p>This is Upholstery</p>
+            </div>
+
+            <div id="Crochet" class="tabcontent">
+                <p>This is Crochet</p>
+            </div>
         </div>
+
+        <script>
+            function openPage(pageName,elmnt) {
+                //hides everything by defualt when page opens
+              var i, tabcontent, tablinks;
+              tabcontent = document.getElementsByClassName("tabcontent");
+              for (i = 0; i < tabcontent.length; i++) {
+                tabcontent[i].style.display = "none";
+              }
+              //Show the content of the tab that is clicked on
+              document.getElementById(pageName).style.display = "block";
+              document.getElementById(pageName).classList.add("active");
+              elmnt.style.backgroundColor = color;
+            }
+            
+            // Get the element with id="defaultOpen" and click on it
+            document.getElementById("defaultOpen").click();
+            document.getElementById("defaultOpen").classList.add("active");
+            </script>
     </body>
 
     <footer>
