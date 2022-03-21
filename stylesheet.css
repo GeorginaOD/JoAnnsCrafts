@@ -65,6 +65,7 @@ nav li {
     bottom: 59px;
     display: flex;
     justify-content: right;
+    padding-top: 60px;
 }
 
 a {
@@ -125,6 +126,7 @@ a {
     line-height: 40px;
      
     column-count: 4;
+    column-width: calc(25%-5px);
     column-gap: 10px;  
     column-fill: balance;
     
@@ -134,7 +136,17 @@ a {
     /* Just in case there are inline attributes */
     width: 100% !important;
     height: auto !important;
+    break-inside: avoid;
   }
+
+.small {
+    height: 90vh;
+}
+
+.med {
+    height: 105vh;
+}
+
 
 footer {
     display: flex;
