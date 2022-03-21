@@ -147,6 +147,25 @@ a {
     height: 105vh;
 }
 
+.img-container {
+    position: relative;
+}
+
+.overlay {
+        width: inherit;
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        opacity: 0;
+        background-color: #0300A5;
+        overflow:hidden;
+}
+
+.img-container:hover .overlay {
+    opacity: 0.65;
+}
 
 footer {
     display: flex;
