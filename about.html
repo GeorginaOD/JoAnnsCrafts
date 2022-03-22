@@ -19,56 +19,21 @@
             <img src="Icons/JoAnnsCrafts_InitialLogo_FullColour_Large-03.svg" class = "TopLogo center">
             <nav id="nav">
                 <ul> 
-                    <li><a href="/index.html" class="nav">Portfolio</a></li> 
+                    <li><a href="index.html" class="nav">Portfolio</a></li> 
                     <li><a href="" class="active nav">About</a></li>
                 </ul> 
             </nav>
-            <div class="topics center"> 
-                <ul> 
-                  <li class="left"><button class="block tablink active" onclick="openCity(event,'Teddies')">Teddies</button></li> 
-                  <li class="left"><button class="block tablink" onclick="openCity(event,'Embroidery')">Embroidery</button></li> 
-                  <li class="left"><button class="block tablink" onclick="openCity(event,'Knitting')">Knitting</button></li> 
-                  <li class="left"><button class="block tablink" onclick="openCity(event,'Miscellaneous')">Miscellaneous</button></li> 
-                  <li class="left"><button class="block tablink" onclick="openCity(event,'Sewing')">Sewing</button></li> 
-                  <li class="left"><button class="block tablink" onclick="openCity(event,'Upholstery')">Upholstery</button></li> 
-                  <li class="left"><button class="block tablink" onclick="openCity(event,'Crochet')">Crochet</button></li> 
-                </ul> 
-
-                <select> 
-                  <option value="" selected="selected" id="defaultOpen">Teddies</option> 
-                  
-                  <option value="">Embroidery</option> 
-                  <option value="">Knitting</option> 
-                  <option value="">Miscellaneous</option> 
-                  <option value="">Sewing</option> 
-                  <option value="">Upholstery</option> 
-                  <option value="">Crochet</option> 
-                </select> 
-            </div>
         </div>
-        <content class = "content">   
+        <content class = "content center">   
+            <h1>About <span class = "joann">Jo-Ann</span></h1>
+            <p>I was born in the South of England into a family that sewing and crafting came naturally.  We were all taught to sew and knit from a very early age.
+The interest in changing from a hobby to a business happened when I left work to start my family and as well as the extra income, I needed something (apart from my children) to keep me busy.
+
+I started with altering clothes in the 1990’s, then started making soft furnishings and making clothes.  People soon became interested in upholstery.  My husband is a Mechanical Design Engineer and soon put his skills into traditional upholstery, more and more clients were requiring his skills and so the business expanded.  We then expanded into designing our own embroideries and people were then asking for bespoke designs.  
+Today I can now put the skills I have learned into a great variety of projects.
+            </p>
            
-        </content> 
-        <div class = "container">
-            <a href="#nav" class="nav BTT">Back to Top</a>
-        </div>
-
-        <script>
-            //code from https://www.w3schools.com/w3css/tryit.asp?filename=tryw3css_tabulators
-            function openCity(evt, topicName) {
-                var i, x, tablinks;
-                x = document.getElementsByClassName("city");
-                for (i = 0; i < x.length; i++) {
-                    x[i].style.display = "none";
-                }
-                tablinks = document.getElementsByClassName("tablink");
-                for (i = 0; i < x.length; i++) {
-                    tablinks[i].className = tablinks[i].className.replace(" active", "");
-                }
-                document.getElementById(topicName).style.display = "block";
-                evt.currentTarget.className += " active";
-            }
-            </script>
+        </content>
     </body>
 
     <footer>
