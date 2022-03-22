@@ -19,6 +19,13 @@ body {
     margin-right: auto;
 }
 
+.content {
+    width: 100%;
+    margin-left: 20px;
+    margin-right: 20px;
+    display: inline-block;
+}
+
 h1 {
     font-family: 'Cormorant Garamond', serif;
     font-size: 48px;
@@ -34,6 +41,8 @@ p {
     font-family: 'Roboto', Arial, sans-serif;
     font-size: 20px;
     text-align: center;
+    line-height: 30px;
+    margin-bottom: 30px;
 }
 
 .joann {
@@ -49,7 +58,7 @@ p {
     display: block;
     margin-left: auto;
     margin-right: auto;
-    width: 50%;
+    width: 90%;
 }
 
 /* https://stackoverflow.com/questions/2939914/how-do-i-vertically-align-text-in-a-div used for styling nav*/
@@ -128,12 +137,6 @@ a {
     text-decoration-color: #DFA67D;
 }
 
-.content {
-    width: 100%;
-    margin-left: 20px;
-    margin-right: 20px;
-    display: inline-block;
-}
 
 #photos {
     line-height: 40px;
