@@ -29,6 +29,14 @@ body {
     display: inline-block;
 }
 
+.left {
+    float: left;
+}
+
+.block {
+    display: block;
+}
+
 h1 {
     font-family: 'Cormorant Garamond', serif;
     font-size: 48px;
@@ -98,14 +106,6 @@ nav li {
 
 a {
     text-decoration: none;
-}
-
-.left {
-    float: left;
-}
-
-.block {
-    display: block;
 }
 
 .topics {
