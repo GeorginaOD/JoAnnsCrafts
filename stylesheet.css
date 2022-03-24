@@ -190,6 +190,28 @@ a {
     opacity: 0.65;
 }
 
+.details {
+    width: 50%;
+    height: fit-content;
+    font-family: 'Roboto', Arial, sans-serif;
+    font-size: 20px;
+    line-height: 30px;
+    margin-bottom: 30px;
+}
+
+.projImage {
+    width: 50%;
+    vertical-align: top;
+}
+
+.projImage img {
+    width: 100%;
+}
+
+.title {
+    margin-bottom: 43px;
+}
+
 footer {
     position: relative;
     right: 0;
