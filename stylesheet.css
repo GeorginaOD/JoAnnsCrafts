@@ -202,10 +202,22 @@ a {
 .projImage {
     width: 50%;
     vertical-align: top;
+    height: 90vh;
+    overflow-y: scroll;
+    overflow-x: hidden;
+    /*based on https://www.w3schools.com/howto/howto_css_hide_scrollbars.asp */
+    -ms-overflow-style: none;  /* IE and Edge */
+    scrollbar-width: none; 
 }
+
+/*based on https://www.w3schools.com/howto/howto_css_hide_scrollbars.asp */
+.projImage::-webkit-scrollbar {
+    display: none;
+  }
 
 .projImage img {
     width: 100%;
+    
 }
 
 .title {
