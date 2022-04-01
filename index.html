@@ -23,6 +23,7 @@
                     <li><a href="about.html" class="nav">About</a></li>
                 </ul> 
             </nav>
+            <!--based on https://css-tricks.com/convert-menu-to-dropdown/-->
             <div class="topics center"> 
                 <ul> 
                   <li class="left"><button class="block tablink active" onclick="openCity(event,'Teddies')">Teddies</button></li> 
@@ -35,14 +36,14 @@
                 </ul> 
 
                 <select> 
-                  <option value="" selected="selected" id="defaultOpen">Teddies</option> 
+                  <option value="" selected="selected" id="defaultOpen" class="center" onclick="openCity(event,'Teddies')"><button class="block tablink active" onclick="openCity(event,'Teddies')">Teddies</button></option> 
                   
-                  <option value="">Embroidery</option> 
-                  <option value="">Knitting</option> 
-                  <option value="">Miscellaneous</option> 
-                  <option value="">Sewing</option> 
-                  <option value="">Upholstery</option> 
-                  <option value="">Crochet</option> 
+                  <option value=""><button class="block tablink" onclick="openCity(event,'Embroidery')">Embroidery</button></option> 
+                  <option value=""><button class="block tablink" onclick="openCity(event,'Knitting')">Knitting</button></option> 
+                  <option value=""><button class="block tablink" onclick="openCity(event,'Miscellaneous')">Miscellaneous</button></option> 
+                  <option value=""><button class="block tablink" onclick="openCity(event,'Sewing')">Sewing</button></option> 
+                  <option value=""><button class="block tablink" onclick="openCity(event,'Upholstery')">Upholstery</button></option> 
+                  <option value=""><button class="block tablink" onclick="openCity(event,'Crochet')">Crochet</button></option> 
                 </select> 
             </div>
         </div>

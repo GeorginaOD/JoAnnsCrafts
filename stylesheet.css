@@ -205,12 +205,12 @@ a {
     height: 90vh;
     overflow-y: scroll;
     overflow-x: hidden;
-    /*based on https://www.w3schools.com/howto/howto_css_hide_scrollbars.asp */
+    /*based on https://www.w3schools.com/howto/howto_css_hide_scrollbars.asp for IE, Edge and Firefox */
     -ms-overflow-style: none;  /* IE and Edge */
     scrollbar-width: none; 
 }
 
-/*based on https://www.w3schools.com/howto/howto_css_hide_scrollbars.asp */
+/*based on https://www.w3schools.com/howto/howto_css_hide_scrollbars.asp, for Chrome, Safari and Opera */
 .projImage::-webkit-scrollbar {
     display: none;
   }
@@ -237,4 +237,44 @@ footer {
     text-transform: uppercase;
     color: black;
     padding: 1rem;
+}
+
+/*based on https://www.freecodecamp.org/news/css-media-queries-breakpoints-media-types-standard-resolutions-and-more/ */
+/*for tablets devices*/
+@media screen and (max-width: 768px) {
+    #photos {
+        line-height: 40px;
+         
+        column-count: 3;
+        column-width: calc(33.3%-5px);
+        column-gap: 10px;  
+        column-fill: balance;
+        
+      }
+    .topics ul    { 
+        display: none; 
+    }
+    .topics select { 
+        display: inline-block; 
+        width: 25%;
+    }
+}
+
+/*for mobile devices*/
+@media screen and (max-width: 480px) {
+    #photos {
+        line-height: 40px;
+         
+        column-count: 1;
+        column-width: calc(100%-5px);
+        column-gap: 10px;  
+        column-fill: balance;
+        
+      }
+    .topics ul      { 
+        display: none; 
+    }
+    .topics select { 
+        display: block; 
+    }
 }
