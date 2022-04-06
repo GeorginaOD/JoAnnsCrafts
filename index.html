@@ -11,6 +11,8 @@
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
         <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,700;1,700&family=Roboto&display=swap" rel="stylesheet">
         <script src="https://unpkg.com/masonry-layout@4/dist/masonry.pkgd.js"></script>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+        
     </head>
 
     <body>
@@ -35,20 +37,20 @@
                   <li class="left"><button class="block tablink" onclick="openCity(event,'Crochet')">Crochet</button></li> 
                 </ul> 
 
-                <select> 
-                  <option value="" selected="selected" id="defaultOpen" class="center" onclick="openCity(event,'Teddies')"><button class="block tablink active" onclick="openCity(event,'Teddies')">Teddies</button></option> 
+                <select id = "topic_select" class="center"> 
+                    <option value="Teddies" selected="selected"  >Teddies</option> 
                   
-                  <option value=""><button class="block tablink" onclick="openCity(event,'Embroidery')">Embroidery</button></option> 
-                  <option value=""><button class="block tablink" onclick="openCity(event,'Knitting')">Knitting</button></option> 
-                  <option value=""><button class="block tablink" onclick="openCity(event,'Miscellaneous')">Miscellaneous</button></option> 
-                  <option value=""><button class="block tablink" onclick="openCity(event,'Sewing')">Sewing</button></option> 
-                  <option value=""><button class="block tablink" onclick="openCity(event,'Upholstery')">Upholstery</button></option> 
-                  <option value=""><button class="block tablink" onclick="openCity(event,'Crochet')">Crochet</button></option> 
+                    <option value="Embroidery">Embroidery</option> 
+                    <option value="Knitting">Knitting</option>
+                    <option value="Miscellaneous">Miscellaneous</option> 
+                    <option value="Sewing">Sewing</option> 
+                    <option value="Upholstery">Upholstery</option> 
+                    <option value="Crochet">Crochet</option> 
                 </select> 
             </div>
         </div>
         <content class = "content">   
-            <div id="Teddies" class="city tablink">
+            <div id="Teddies" class="topic tablink topicDropdown">
                 <section id="photos">
                     <div class = "img-container">
                         <img src="Images/Teddies/golden teddy 02.png" alt="Golden Teddy" >
@@ -101,7 +103,7 @@
                 </section>
             </div>
 
-            <div id="Embroidery" class="city tablink" style="display:none">
+            <div id="Embroidery" class="topic tablink topicDropdown" style="display:none">
                 <section id="photos" class = "med">
                     <div class = "img-container">
                         <img src="Images/embroidery/200408d27.jpg" alt="Heart and Lungs">
@@ -130,7 +132,7 @@
                 </section>
             </div>
 
-            <div id="Knitting" class="city tablink" style="display:none">
+            <div id="Knitting" class="topic tablink topicDropdown" style="display:none">
                 <section id="photos">
                     <div class = "img-container">
                         <img src="Images/knitting/card mc01.JPG" alt="Yellow Cardigan">
@@ -179,7 +181,7 @@
                 </section>
             </div>
 
-            <div id="Miscellaneous" class="city tablink" style="display:none">
+            <div id="Miscellaneous" class="topic tablink topicDropdown" style="display:none">
                 <section id="photos">
                     <div class = "img-container">
                         <img src="Images/Miscellaneous/200505a33.jpg" alt="Blue fabric clock">
@@ -236,7 +238,7 @@
                 </section>
             </div>
 
-            <div id="Sewing" class="city tablink" style="display:none">
+            <div id="Sewing" class="topic tablink topicDropdown" style="display:none">
                 <section id="photos">
                     <div class = "img-container">
                         <img src="Images/sewing/19971922.jpg" alt="">
@@ -337,7 +339,7 @@
                 </section>
             </div>
 
-            <div id="Upholstery" class="city tablink" style="display:none">
+            <div id="Upholstery" class="topic tablink topicDropdown" style="display:none">
                 <section id="photos">
                     <div class = "img-container">
                         <img src="Images/Upholstery/19980848.jpg" alt="">
@@ -426,7 +428,7 @@
                 </section>
             </div>
 
-            <div id="Crochet" class="city tablink" style="display:none">
+            <div id="Crochet" class="topic tablink topicDropdown" style="display:none">
                 <section id="photos" class = "small">
                     <div class = "img-container">
                         <img src="Images/crochet/doily 01.JPG" alt="">
@@ -452,14 +454,15 @@
             </div>
         </content> 
         <div class = "container">
-            <a href="#nav" class="nav BTT">Back to Top</a>
+            <a href="#nav" class="BTT nav">Back to Top</a>
         </div>
         
         <script>
+            
             //code from https://www.w3schools.com/w3css/tryit.asp?filename=tryw3css_tabulators
             function openCity(evt, topicName) {
                 var i, x, tablinks;
-                x = document.getElementsByClassName("city");
+                x = document.getElementsByClassName("topic");
                 for (i = 0; i < x.length; i++) {
                     x[i].style.display = "none";
                 }
@@ -470,6 +473,35 @@
                 document.getElementById(topicName).style.display = "block";
                 evt.currentTarget.className += " active";
             }
+
+            //code based on https://codepen.io/mmp1992/pen/nwKOxY
+            function topicDropdown () {
+                //hides dropdown content
+                var topicDropdown = document.getElementsByClassName("topicDropdown");
+                var i;
+                for (i = 0; i < topicDropdown.length; i++) {
+                    topicDropdown[i].style.display = 'none';
+                }
+
+                //shows first content
+                document.getElementById('Teddies').style.display = "block";
+
+                //listen to dropdown for change
+                $("#topic_select").change(function(){
+                    //rehide content on change
+                    for (i = 0; i < topicDropdown.length; i++) {
+                    topicDropdown[i].style.display = 'none';
+                    }
+                    //unhides current item
+                    document.getElementById($(this).val()).style.display = "block";
+                });
+            }
+
+            //checks window size
+            if (window.matchMedia("(max-width: 768px)").matches) { 
+                    //calls the dropdown function to make it work
+                    topicDropdown();
+            }       
             </script>
     </body>
     <footer>
