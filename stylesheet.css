@@ -245,6 +245,8 @@ footer {
     padding: 1rem;
 }
 
+
+
 /*based on https://www.freecodecamp.org/news/css-media-queries-breakpoints-media-types-standard-resolutions-and-more/ */
 /*for tablets devices*/
 @media screen and (max-width: 820px) {
@@ -273,13 +275,6 @@ footer {
 
     nav ul {
         padding-left: 0;
-    }
-
-    .BTT {
-        width: 90%;
-        display: flex;
-        justify-content: center;
-        align-content: center;
     }
 
     #photos {
