@@ -148,17 +148,17 @@ a {
 }
 
 
-#photos {
+.photos {
     line-height: 40px;
      
     column-count: 4;
-    column-width: calc(25%-5px);
+    column-width: 20vw;
     column-gap: 10px;  
     column-fill: balance;
     
   }
   
-#photos img {
+.photos img {
     /* Just in case there are inline attributes */
     width: 100% !important;
     height: auto !important;
@@ -277,11 +277,11 @@ footer {
         padding-left: 0;
     }
 
-    #photos {
+    .photos {
         line-height: 40px;
          
         column-count: 3;
-        column-width: calc(33.3%-5px);
+        column-width: 30vw;
         column-gap: 10px;  
         column-fill: balance;
         
@@ -292,6 +292,7 @@ footer {
     .topics select { 
         display: block; 
         width: 25%;
+        padding-bottom: 22px;
     }
     
     .small {
@@ -357,11 +358,11 @@ footer {
         align-content: center;
     }
 
-    #photos {
+    .photos {
         line-height: 40px;
          
         column-count: 1;
-        column-width: 100%;
+        /*column-width: 100%;*/
         column-gap: 10px;  
         column-fill: balance;
         
@@ -372,6 +373,7 @@ footer {
     .topics select { 
         display: block; 
         width: 25%;
+        padding-bottom: 29px;
     }
 
     .small {
