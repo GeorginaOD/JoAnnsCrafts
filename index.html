@@ -25,7 +25,8 @@
                     <li><a href="about.html" class="nav">About</a></li>
                 </ul> 
             </nav>
-            <!--based on https://css-tricks.com/convert-menu-to-dropdown/-->
+            <!--based on https://css-tricks.com/convert-menu-to-dropdown/
+            for the desktop website-->
             <div class="topics center"> 
                 <ul> 
                   <li class="left"><button class="block tablink active" onclick="openCity(event,'Teddies')">Teddies</button></li> 
@@ -37,6 +38,7 @@
                   <li class="left"><button class="block tablink" onclick="openCity(event,'Crochet')">Crochet</button></li> 
                 </ul> 
 
+                <!--Navigation drop down for mobile/tablet version-->
                 <select id = "topic_select" class="center"> 
                     <option value="Teddies" selected="selected"  >Teddies</option> 
                   
@@ -50,6 +52,7 @@
             </div>
         </div>
         <div class = "content">   
+            <!--Content for each of the topics, pictures of the projects and their links-->
             <div id="Teddies" class="topic tablink topicDropdown">
                 <section class="photos">
                     <div class = "img-container">
@@ -460,16 +463,22 @@
         <script>
             
             //code from https://www.w3schools.com/w3css/tryit.asp?filename=tryw3css_tabulators
+            //makes the tabs work, hides unwanted tab content and shows selected
             function openCity(evt, topicName) {
                 var i, x, tablinks;
+                //sets x to an array of all the elements with the class of 'topic'
                 x = document.getElementsByClassName("topic");
+                //hides all of the topic content
                 for (i = 0; i < x.length; i++) {
                     x[i].style.display = "none";
                 }
+                //gets the links in the navigation
                 tablinks = document.getElementsByClassName("tablink");
+                //sets the clicked on link to active
                 for (i = 0; i < x.length; i++) {
                     tablinks[i].className = tablinks[i].className.replace(" active", "");
                 }
+                //shows the clicked on topic
                 document.getElementById(topicName).style.display = "block";
                 evt.currentTarget.className += " active";
             }
