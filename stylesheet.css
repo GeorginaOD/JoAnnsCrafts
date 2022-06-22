@@ -293,13 +293,22 @@ footer {
     .topics ul    { 
         display: none; 
     }
-    .topics select { 
+    #topic_select { 
         display: block; 
         width: 25%;
         padding-bottom: 22px;
 
     }
     
+    .topicbtn {
+        background-color: #DFA67D;
+        color: #263061;
+        padding: 16px;
+        font-size: 16px;
+        border: none;
+        cursor: pointer;
+    }
+
     .small {
         height: 100%;
     }
