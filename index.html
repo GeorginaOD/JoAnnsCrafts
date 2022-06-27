@@ -55,13 +55,13 @@
                 <div class="dropdown">
                     <button class="dropbtn" onclick="document.getElementsByClassName('dropdown-content')[0].style.display = 'block';">Dropdown</button>
                     <div class="dropdown-content">
-                        <button class = "dropdownLink" onclick="openCity(event,'Teddies')">Teddies</button>
-                        <button class = "dropdownLink" onclick="openCity(event,'Embroidery')">Embroidery</button>
-                        <button class = "dropdownLink" onclick="openCity(event,'Knitting')">Knitting</button>
-                        <button class = "dropdownLink" onclick="openCity(event,'Miscellaneous')">Miscellaneous</button>
-                        <button class = "dropdownLink" onclick="openCity(event,'Sewing')">Sewing</button>
-                        <button class = "dropdownLink" onclick="openCity(event,'Upholstery')">Upholstery</button>
-                        <button class = "dropdownLink" onclick="openCity(event,'Crochet')">Crochet</button>
+                        <button class = "dropdownLink tablink" onclick="openCity(event,'Teddies')">Teddies</button>
+                        <button class = "dropdownLink tablink" onclick="openCity(event,'Embroidery')">Embroidery</button>
+                        <button class = "dropdownLink tablink" onclick="openCity(event,'Knitting')">Knitting</button>
+                        <button class = "dropdownLink tablink" onclick="openCity(event,'Miscellaneous')">Miscellaneous</button>
+                        <button class = "dropdownLink tablink" onclick="openCity(event,'Sewing')">Sewing</button>
+                        <button class = "dropdownLink tablink" onclick="openCity(event,'Upholstery')">Upholstery</button>
+                        <button class = "dropdownLink tablink" onclick="openCity(event,'Crochet')">Crochet</button>
                     </div>
                 </div>
 
@@ -496,7 +496,6 @@
                 //hides all of the topic content
                 for (i = 0; i < x.length; i++) {
                     x[i].style.display = "none";
-                    x[i].classList.remove("active");
                 }
                 //gets the links in the navigation
                 tablinks = document.getElementsByClassName("tablink");
