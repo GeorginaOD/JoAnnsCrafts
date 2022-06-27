@@ -554,33 +554,13 @@
                     //unhides current item
                     document.getElementById($(this).val()).style.display = "block";
                 });
-            }*/ 
+            }
 
             //checks window size
             if (window.matchMedia("(max-width: 820px)").matches) { 
                     //calls the dropdown function to make it work
-                    //topicDropdown();
-                    function openCity(evt, topicName) {
-                        var i, x, tablinks;
-                        //sets x to an array of all the elements with the class of 'topic'
-                        x = document.getElementsByClassName("topic");
-                        //hides all of the topic content
-                        for (i = 0; i < x.length; i++) {
-                            x[i].style.display = "none";
-                        }
-                        //gets the links in the navigation
-                        tablinks = document.getElementsByClassName("tablink");
-                        //sets the clicked on link to active
-                        for (i = 0; i < x.length; i++) {
-                            tablinks[i].className = tablinks[i].className.replace(" active", "");
-                        }
-                        //shows the clicked on topic
-                        document.getElementById(topicName).style.display = "block";
-                        evt.currentTarget.className += " active";
-
-                        document.getElementsByClassName("dropdown-content")[0].style.display = "none";
-                }
-            }     
+                    topicDropdown();
+            } */     
             </script>
 
         <footer>
