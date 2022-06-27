@@ -53,7 +53,7 @@
                 </div>-->
 
                 <div class="dropdown">
-                    <button class="dropbtn" onclick="document.getElementsByClassName('dropdown-content')[0].style.display = 'block';"></button>
+                    <button class="dropbtn" id = "dropbtn" onclick="document.getElementsByClassName('dropdown-content')[0].style.display = 'block';"></button>
                     <div class="dropdown-content">
                         <button class = "dropdownLink tablink" onclick="openDP(event,'Teddies')">Teddies</button>
                         <button class = "dropdownLink tablink" onclick="openDP(event,'Embroidery')">Embroidery</button>
@@ -560,6 +560,7 @@
             //checks window size
             if (window.matchMedia("(max-width: 820px)").matches) { 
                     //calls the dropdown function to make it work
+                    document.getElementById('dropbtn').innerHTML = 'Teddies';
                     function openDP(evt, topicName) {
                         var i, x, tablinks, droplinks;
                         //sets x to an array of all the elements with the class of 'topic'
