@@ -496,6 +496,7 @@
                 //hides all of the topic content
                 for (i = 0; i < x.length; i++) {
                     x[i].style.display = "none";
+                    x[i].classList.remove("active");
                 }
                 //gets the links in the navigation
                 tablinks = document.getElementsByClassName("tablink");
