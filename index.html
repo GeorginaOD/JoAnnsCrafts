@@ -490,7 +490,7 @@
             //code from https://www.w3schools.com/w3css/tryit.asp?filename=tryw3css_tabulators
             //makes the tabs work, hides unwanted tab content and shows selected
             function openCity(evt, topicName) {
-                var i, x, tablinks;
+                var i, x, tablinks, droplinks;
                 //sets x to an array of all the elements with the class of 'topic'
                 x = document.getElementsByClassName("topic");
                 //hides all of the topic content
@@ -502,6 +502,12 @@
                 //sets the clicked on link to active
                 for (i = 0; i < x.length; i++) {
                     tablinks[i].className = tablinks[i].className.replace(" active", "");
+                }
+
+                droplinks = document.getElementsByClassName("dropdownLink");
+
+                for (i = 0; i < x.length; i++) {
+                    droplinks[i].className = droplinks[i].className.replace(" active", "");
                 }
                 //shows the clicked on topic
                 document.getElementById(topicName).style.display = "block";
