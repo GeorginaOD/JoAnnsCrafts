@@ -322,7 +322,7 @@ footer {
     
     .dropdown {
         display: block; 
-        width: 25%;
+        width: 200px;
         padding-bottom: 22px;
     }
     
@@ -340,6 +340,7 @@ footer {
         color: #263061;
         font-family: 'Cormorant Garamond', serif;
         font-size: 24px;
+        width: fit;
         text-transform: uppercase;
         border: none;
         background-color: transparent;
